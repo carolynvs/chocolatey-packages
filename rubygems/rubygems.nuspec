@@ -3,7 +3,7 @@
   <metadata>
     <id>rubygems</id>
     <title>RubyGems</title>
-    <version>2.1.11</version>
+    <version>2.1.11.0</version>
     <authors>Nick Quaranto</authors>
     <owners>Carolyn Van Slyck</owners>
     <summary>The Ruby community's gem hosting service.</summary>
