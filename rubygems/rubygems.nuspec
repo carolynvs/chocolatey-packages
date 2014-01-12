@@ -11,7 +11,7 @@
     <projectUrl>https://rubygems.org</projectUrl>
     <tags>rubygems ruby</tags>
     <copyright></copyright>
-    <licenseUrl>https://github.com/rubygems/rubygems.org/blob/master/MIT-LICENSE</licenseUrl>
+    <licenseUrl>https://raw.github.com/rubygems/rubygems.org/master/MIT-LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.github.com/carolynvs/chocolatey-packages/master/rubygems/rubygems.png</iconUrl>
     <dependencies>
