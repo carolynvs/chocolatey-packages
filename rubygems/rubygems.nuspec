@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>rubygems</id>
+    <title>RubyGems</title>
+    <version>2.1.11</version>
+    <authors>Nick Quaranto</authors>
+    <owners>Carolyn Van Slyck</owners>
+    <summary>The Ruby community's gem hosting service.</summary>
+    <description>The Ruby community's gem hosting service.</description>
+    <projectUrl>https://rubygems.org</projectUrl>
+    <tags>rubygems ruby</tags>
+    <copyright></copyright>
+    <licenseUrl>https://github.com/rubygems/rubygems.org/blob/master/MIT-LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.github.com/carolynvs/master/rubygems/rubygems.png</iconUrl>
+    <dependencies>
+      <dependency id="ruby" />
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
