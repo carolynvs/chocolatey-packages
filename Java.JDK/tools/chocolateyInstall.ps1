@@ -8,6 +8,7 @@ $jdk_version = '7u51'
 $build = '13'
 $java_version = "1.7.0_51" # cmd> java -version => "1.7.0_04"
 $package_name = 'Java.JDK'
+$script_path = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 
 function use64bit() {
     $is64bitOS = (Get-WmiObject -Class Win32_ComputerSystem).SystemType -match ‘(x64)’
@@ -37,30 +38,26 @@ function set-env-var([string]$name, [string]$value, [string]$type = 'User') {
     }
 }
 
-function download-from-oracle($url, $output_filename, $part) {
+function download-from-oracle($url, $output_filename) {
     if (-not (has_file($output_fileName))) {
         Write-Host  "Downloading JDK from $url"
 
+        [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
         $client = New-Object Net.WebClient
-        $client.Headers.Add('Cookie', 'oraclelicense$part-oth-JPR=accept-securebackup-cookie;gpw_e24=http://edelivery.oracle.com')
+        $client.Headers.Add('Cookie', 'gpw_e24=http://www.oracle.com')
         $client.DownloadFile($url, $output_filename)
-
-        if (-not (has_file($output_fileName))) {
-            Write-ChocolateyFailure 'Java.JDK' "Error downloading $url to $output_filename"
-        }
     }  
 }
 
 function download-jdk-file($url, $output_filename) {
-    download-from-oracle $url $output_filename "jdk-$jdk_version"
+    download-from-oracle $url $output_filename
 }
 
 function download-jdk() {
     $arch = get-arch
     $filename = "jdk-$jdk_version-windows-$arch.exe"
     $url = "http://download.oracle.com/otn-pub/java/jdk/$jdk_version-b$build/$filename"
-    $package_dir = Join-Path $env:TEMP "chocolatey\$package_name"
-    $output_filename = Join-Path $package_dir $filename
+    $output_filename = Join-Path $script_path $filename
 
     download-jdk-file $url $output_filename
 
@@ -125,8 +122,14 @@ try {
     
     chocolatey-install  
 } catch {
-  Write-ChocolateyFailure 'Java.JDK' "$($_.Exception.Message)"
-  throw 
+    if ($_.Exception.InnerException) {
+        $msg = $_.Exception.InnerException.Message
+    } else {
+        $msg = $_.Exception.Message
+    }
+    
+    Write-ChocolateyFailure 'Java.JDK' "$msg"
+    throw 
 }  
 
 
