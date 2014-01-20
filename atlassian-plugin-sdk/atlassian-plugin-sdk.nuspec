@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>atlassian-plugin-sdk</id>
+    <title>Atlassian Plugin SDK</title>
+    <version>4.2.12</version>
+    <authors>Atlassian</authors>
+    <owners>Carolyn Van Slyck</owners>
+    <summary>The Atlassian Plugin SDK (4.2.12)</summary>
+    <description>The Atlassian Plugin SDK (4.2.12)</description>
+    <projectUrl>https://developer.atlassian.com</projectUrl>
+    <tags>atlassian plugin sdk</tags>
+    <copyright>Copyright © 2013 Atlassian</copyright>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.github.com/carolynvs/chocolatey-packages/master/atlassian-plugin-sdk/atlassian-logo.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
