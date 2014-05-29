@@ -3,11 +3,11 @@
   <metadata>
     <id>java.jdk</id>
     <title>Java.JDK</title>
-    <version>7.0.51.3</version>
+    <version>7.0.60.0</version>
     <authors>Sun Microsystems/Oracle Corporation</authors>
     <owners>Elliando Dias, Carolyn Van Slyck</owners>
-    <summary>The Java Development Kit (JDK) version 7.0.51</summary>
-    <description>The Java Development Kit (JDK) version 7.0.51.
+    <summary>The Java Development Kit (JDK) version 7.0.60</summary>
+    <description>The Java Development Kit (JDK) version 7.0.60.
     
 Supported parameters, use -params e.g. '"path=c:\\java\\jdk;x64=false"' to override defaults
 * Use x64=false to force the 32-bit version. By default this package installs the x64 version when installing on 64 bit OS.
@@ -20,6 +20,6 @@ After installation it will set CLASSPATH and JAVA_HOME environment variables.</d
     <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/carolynvs/chocolatey-packages/raw/master/Java.JDK/java-logo.jpg</iconUrl>
-    <releaseNotes>http://www.oracle.com/technetwork/java/javase/7u51-relnotes-2085002.html</releaseNotes>
+    <releaseNotes>http://www.oracle.com/technetwork/java/javase/7u60-relnotes-2200106.html</releaseNotes>
   </metadata>
 </package>
