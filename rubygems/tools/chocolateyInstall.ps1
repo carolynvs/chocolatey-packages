@@ -1,6 +1,6 @@
 ﻿$pwd = Get-Location
 $packageName = 'rubygems'
-$version = '2.1.11'
+$version = '2.4.1'
 $zipName = "rubygems-$version.zip"
 $url = "http://production.cf.rubygems.org/rubygems/$zipName"
 $validExitCodes = @(0)
