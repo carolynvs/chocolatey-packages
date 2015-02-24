@@ -4,9 +4,9 @@
 # http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-windows-i586.exe
 # http://download.oracle.com/otn-pub/java/jdk/7u51-b13/jdk-7u51-windows-x64.exe
 
-$jdk_version = '7u60' 
-$build = '19'
-$java_version = "1.7.0_60" # cmd> java -version => "1.7.0_04"
+$jdk_version = '7u75' 
+$build = '13'
+$java_version = "1.7.0_75" # cmd> java -version => "1.7.0_04"
 $package_name = 'Java.JDK'
 $script_path = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 
