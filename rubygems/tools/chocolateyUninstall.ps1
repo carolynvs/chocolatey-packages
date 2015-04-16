@@ -1,1 +1,1 @@
-﻿Start-ChocolateyProcessAsAdmin 'uninstall -x rubygems-update' 'gem'
+﻿& gem uninstall -x rubygems-update
