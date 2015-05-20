@@ -2,24 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>java.jdk</id>
-    <title>Java.JDK</title>
-    <version>7.0.75</version>
+    <title>[Deprecated]Java.JDK</title>
+    <version>7.0.75.20150520</version>
     <authors>Sun Microsystems/Oracle Corporation</authors>
     <owners>Elliando Dias, Carolyn Van Slyck</owners>
     <summary>The Java Development Kit (JDK) version 7.0.75</summary>
-    <description>The Java Development Kit (JDK) version 7.0.75.
-    
-Supported parameters, use -params e.g. '"path=c:\\java\\jdk;x64=false"' to override defaults
-* Use x64=false to force the 32-bit version. By default this package installs the x64 version when installing on 64 bit OS.
-* Use path=installation_path to change the installation path. By default, installs into Program Files. If you specify a path with spaces, use 2 single quotes around the path, e.g. path=''c:\\Java JDK''.
-
-After installation it will set CLASSPATH and JAVA_HOME environment variables.</description>
+    <description>This package has been deprecated. The Chocolatey moderators request that you use jdk7 instead.</description>
     <projectUrl>http://www.oracle.com/technetwork/java/javase/downloads/index.html</projectUrl>
-    <tags>java jdk</tags>
     <copyright>Copyright © 1993, 2012, Oracle and/or its affiliates. All rights reserved.</copyright>
     <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/carolynvs/chocolatey-packages/raw/master/Java.JDK/java-logo.jpg</iconUrl>
-    <releaseNotes>http://www.oracle.com/technetwork/java/javase/7u60-relnotes-2200106.html</releaseNotes>
+	<dependencies>
+	  <dependency id="jdk7" />
+	</dependencies>
   </metadata>
 </package>
